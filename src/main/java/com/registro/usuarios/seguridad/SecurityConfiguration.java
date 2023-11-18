@@ -44,18 +44,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				"/registro**",
 				"/js/**",
 				"/css/**",
-				"/img/**").permitAll()
+				"/img/**",
+				"/assets/**").permitAll()
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()
-		.loginPage("/login")
+		.loginPage("/login").defaultSuccessUrl("/")
 		.permitAll()
 		.and()
 		.logout()
 		.invalidateHttpSession(true)
 		.clearAuthentication(true)
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-		.logoutSuccessUrl("/login?logout")
+		.logoutSuccessUrl("/login")
 		.permitAll();
 	}
 }
