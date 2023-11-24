@@ -1,5 +1,6 @@
 package com.registro.usuarios.controlador.dto;
 
+// Este objeto DTO maneja información relacionada con el registro de usuarios. Me permite transferir datos entre las diferentes capas
 public class UsuarioRegistroDTO {
 
 	private Long id;

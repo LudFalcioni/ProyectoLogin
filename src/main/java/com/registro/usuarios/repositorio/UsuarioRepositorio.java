@@ -7,7 +7,7 @@ import com.registro.usuarios.modelo.Usuario;
 
 @Repository
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
-
+	// Genera una consulta para buscar un usuario por su dirección de correo electrónico basándose en el nombre del método (findByEmail).
 	public Usuario findByEmail(String email);
 	
 }

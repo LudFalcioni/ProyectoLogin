@@ -11,6 +11,7 @@ import com.registro.usuarios.servicio.UsuarioServicio;
 
 @Controller
 @RequestMapping("/registro")
+// Este controlador maneja las peticiones GET para mostrar un formulario de registro y las peticiones POST para registrar un nuevo usuario utilizando un DTO y un servicio específico.
 public class RegistroUsuarioControlador {
 
 	private UsuarioServicio usuarioServicio;
@@ -27,11 +28,13 @@ public class RegistroUsuarioControlador {
 
 	@GetMapping
 	public String mostrarFormularioDeRegistro() {
+		// retorna la vista registro
 		return "registro";
 	}
 	
 	@PostMapping
 	public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
+		// se guardan los datos ingresados
 		usuarioServicio.guardar(registroDTO);
 		return "redirect:/login";
 	}

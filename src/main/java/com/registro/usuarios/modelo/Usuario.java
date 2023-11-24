@@ -32,6 +32,7 @@ public class Usuario {
 	private String email;
 	private String password;
 	
+	// La entidad usuario se relaciona muchos a muchos con la entidad rol
 	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinTable(
 			name = "usuarios_roles",
