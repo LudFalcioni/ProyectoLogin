@@ -31,3 +31,7 @@
 .side-nav{
   min-width: 15rem;
 }
+
+.dashboard-li{
+  list-style: none ;
+}
